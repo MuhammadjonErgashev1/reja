@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Reja
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+    <body style="background-color: beige;">
+        <div class="container">
+            <h1 style="text-align: center;">Reja va Maqsadlar</h1>
+        </div>
+        <div class="jumbotron p-3 shadow-sm">
+      <form id="create-form" action="/create-item" method="POST">
+        <div class="d-flex align-items-center">
+          <input
+            id="create-field"
+            name="item"
+            autofocus
+            autocomplete="off"
+            class="form-control mr-3"
+            type="text"
+            placeholder="Yangi maqsad yoki reja kiritish"
+          />
+          <button type="submit" class="btn btn-primary">Qo'shish</button>
+        </div>
+      </form>
+        
+    </body>
+</html>
