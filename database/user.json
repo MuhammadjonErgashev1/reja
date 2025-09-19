@@ -1,0 +1,31 @@
+{
+"name": "Steve",
+"profession": "Software Engineer",
+"X": "Age:",
+"age": 20,
+"Y": "Residense:",
+"residence": "S.Korea",
+"F": "Freelance:",
+"freelance": "Available",
+"A": "Adress:",
+"address":"S.Korea,Busan",
+"L": "Languages",
+"Uz": "Uzbek",
+"Foiz":100,
+"En": "English",
+"Foiz1":80,
+"Kor": "Korean",
+"Foiz2":60,
+
+"foiz":[90,85,80,75,85],
+
+"languages":["Uzbek","Korean","English"],
+"skills": ["Html","Css","Javascript","Nodejs","Phyton"],
+"extra_skills": ["Bootstrap, Materialize","Styling,Sass","Djanggo,Flask","Git Knowledge"],
+"work_place": "IT company",
+"service_desk": " Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.",
+"about_me": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.",
+"city": "Denau",
+"title": ["Flower","Seedlings","Gardner","Old","New"],
+"flower_desk": ["What is a flower","What is a seedling","Who is Gardner"]
+}

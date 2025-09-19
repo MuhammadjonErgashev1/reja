@@ -2,6 +2,9 @@ console.log("web serverni qurish");
 const express=require('express');
 const app=express();
 const http=require('http');
+const fs=require("fs");
+
+
 //1 kirish
 app.use(express.static("public"));
 app.use(express.json());

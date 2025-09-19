@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <title>Portfolio</title>
+</head>
+<body>
+   <div class="main">
+        <!--asosiy frame-->
+        <div class="main_frame">
+            <!--chap tomon-->
+            <div class="left_frame">
+                <div class="left_1">
+                    <div class="left1_1"><img src="images/profile.png" width="156px" height="142px" alt=""></div>
+                    <div class="left1_2">
+                        <%=user.name%>
+                    </div>
+                    <div class="left1_3">
+                        <%=user.profession%>
+                    </div>
+                    <div class="left_icons">
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Icons-facebook (1).png" alt="" class="icon1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Vector (1).svg" alt="" class="icon1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src=" icon/Vector (2).svg" alt="" class="icon1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Vector (3).svg" alt="" class="icon1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Icons-Youtube.svg" alt="" class="icon1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Vector (5).svg" alt="" class="icon1">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_2">
+                    <div class="a">
+                        <div class="b"><%=user.X%></div>
+                        <div class="b1"><%=user.age%></div>
+                    </div>
+                    <div class="a">
+                        <div class="c"><%=user.Y%></div>
+                        <div class="c1"><%=user.residence%></div>
+                    </div>
+                    <div class="a">
+                        <div class="d"><%=user.F%></div>
+                        <div class="d1"><%=user.freelance%></div>
+                    </div>
+                    <div class="a">
+                        <div class="e"><%=user.A%></div>
+                        <div class="e1"><%=user.address%></div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_3">
+                    <div class="left_3a">
+                        <div class="langc"><%=user.L%></div>
+                        <div class="lang">
+                            <div class="langu"><%=user.Uz%></div>
+                            <div class="langu1"><%=user.Foiz%></div>
+                        </div>
+                        <div class="margin1"></div>
+                        <div class="lang">
+                            <div class="lange"><%=user.En%></div>
+                            <div class="lange1"><%=user.Foiz1%></div>
+                        </div>
+                        <div class="margin1"></div>
+                        <div class="lang">
+                            <div class="lange"><%=user.Kor%></div>
+                            <div class="lange1"><%=user.Foiz2%></div>
+                        </div>
+                        <div class="margin1"></div>
+                    </div>
+                </div>
+                
+                <div class="marginer"></div>
+                
+                <div class="left_4">
+                    
+                    <div class="skil">
+                        <div class="nameS">Skills</div>
+                        <div class="skil1">
+                            <div class="sinfo"><%=user.skills[0]%></div>
+                            <div class="sinfoN"><%=user.foiz[0]%></div>
+                        </div>
+                        <div class="chiziq"></div>
+                        <div class="skil1">
+                            <div class="sinfo"><%=user.skills[1]%></div>
+                            <div class="sinfoN"><%=user.foiz[1]%></div>
+                        </div>
+                        <div class="chiziq1"></div>
+                        <div class="skil1">
+                            <div class="sinfo"><%=user.skills[2]%></div>
+                            <div class="sinfoN"><%=user.foiz[2]%></div>
+                        </div>
+                        <div class="chiziq2"></div>
+                        <div class="skil1">
+                            <div class="sinfo"><%=user.skills[3]%></div>
+                            <div class="sinfoN"><%=user.foiz[3]%></div>
+                        </div>
+                        <div class="chiziq3"></div>
+                        <div class="skil1">
+                            <div class="sinfo"><%=user.skills[4]%></div>
+                            <div class="sinfoN"><%=user.foiz[4]%></div>
+                        </div>
+                        <div class="chiziq4"></div>
+
+                    </div>
+                
+
+
+                
+                </div>
+                
+                
+                <div class="marginer"></div>
+                <div class="left_5">
+                        <div class="nameS1">Extra Skills</div>
+                    <div class="skil1">
+                            <div class="sinfo1"><img src="icon/Icons (1).svg" alt="">  </div>
+                            <div class="sinfoN1"><%=user.extra_skills[1]%></div>
+                            
+                        </div>
+                    <div class="skil1">
+                            <div class="sinfo1"><img src="icon/Icons (1).svg" alt=""></div>
+                            <div class="sinfoN1"><%=user.extra_skills[1]%></div>
+                        </div>
+                    <div class="skil1">
+                            <div class="sinfo1"><img src="icon/Icons (1).svg" alt=""></div>
+                            <div class="sinfoN1"><%=user.extra_skills[2]%></div>
+                        </div>
+                    <div class="skil1">
+                            <div class="sinfo1"><img src="icon/Icons (1).svg" alt=""></div>
+                            <div class="sinfoN1"><%=user.extra_skills[3]%></div>
+                        </div>
+                </div>
+
+                <div class="marginer"></div>
+                
+            </div>
+            <!--o'rta tomon-->
+            
+            <div class="middle_frame">
+                <div class="up1">
+                    <div class="mid_left">
+                    <div class="mid_left1"><%=user.service_desk%></div>
+                    <div class="mid_left2"><%=user.about_me%></div>
+                    <div class="btn"><button>HIRE ME</button></div>
+                    </div>
+                <div class="mid_right">
+                    <img src="/author/images/yourimg.png " width="326.055px" height="446.633px">
+                </div>
+            </div>
+
+            <div class="up2">
+
+                <div class="part1">My services</div>
+                <div class="part2"><%=user.about_me%></div>
+                <div class="part3">
+                    <div class="last">
+                        <div class="shakl"><img src="icon/1.png" alt="" width="68px" height="68px"></div>
+                        <div class="soha">Web development</div>
+                        <div class="matn">Blog,e-commerce</div>
+                    </div>
+                    <div class="last">
+                        <div class="shakl"><img src="icon/2.png" alt="" width="68px" height="68px"></div>
+                        <div class="soha">UE/UX Design</div>
+                        <div class="matn">Mobile app,Website Design</div>
+                    </div>
+                    <div class="last">
+                        <div class="shakl"><img src="icon/3.png" alt="" width="68px" height="68px"></div>
+                        <div class="soha">Sound Design</div>
+                        <div class="matn">Voice over,Beat making</div>
+                    </div>
+                </div>
+                <div class="part3">
+                    <div class="last">
+                        <div class="shakl"><img src="icon/4.png" alt="" width="68px" height="68px"></div>
+                        <div class="soha">Game Design</div>
+                        <div class="matn">Charachter design,props,objects</div>
+                    </div>
+                    <div class="last">
+                        <div class="shakl"><img src="icon/5.png" alt="" width="68px" height="68px"></div>
+                        <div class="soha">Photography</div>
+                        <div class="matn">Portrait,Product Photography</div>
+                    </div>
+                    <div class="last">
+                        <div>Advertising</div>
+                        <div class="soha">Photography</div>
+                        <div class="matn">Portrait,Product Photography</div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+                
+            
+            </div>
+            <!--o'ng tomon-->
+            <div class="right_frame"></div>
+        </div>
+     
+    </div>
+
+   </div>
+</body>
+</html>
