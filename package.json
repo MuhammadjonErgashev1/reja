@@ -6,7 +6,10 @@
   "scripts": {
     "start": "nodemon server.js",
     "dev": "nodemon reja2.js",
+    "train": "nodemon train.js",
+    "alg": "nodemon algorithm.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "author": "Muhammadjon",
   "license": "ISC",
