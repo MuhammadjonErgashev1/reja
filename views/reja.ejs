@@ -12,7 +12,7 @@
     <body style="background-color: beige;">
         <div class="container">
             <h1 style="text-align: center;">Reja va Maqsadlar</h1>
-        </div>
+        
         <div class="jumbotron p-3 shadow-sm">
       <form id="create-form" action="/create-item" method="POST">
         <div class="d-flex align-items-center">
@@ -23,11 +23,16 @@
             autocomplete="off"
             class="form-control mr-3"
             type="text"
-            placeholder="Yangi maqsad yoki reja kiritish"
+            placeholder="Yangi  reja kiritish"
           />
-          <button type="submit" class="btn btn-primary">Qo'shish</button>
+          <button type="submit" class="btn btn-primary" style="border-radius: 20px;">Yangi reja qoshish</button>
         </div>
       </form>
-        
+      
+      <button id="clean-all" class="btn btn-danger" style="border-radius: 20px;">
+         Hamma rejalarni ochirish
+      </button>
+       
+    </div>  
     </body>
 </html>

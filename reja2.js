@@ -25,7 +25,7 @@ app.set("views","views");
 app.set("view engine","ejs");
 //4 rauting code
 app.get("/",function(req,res){
-    res.render("harid");
+    res.render("reja");
 });
 app.post("/create-item", (req,res)=>{
     console.log(req.body);
@@ -39,5 +39,5 @@ app.get('/author', (req,res)=>{
 const server=http.createServer(app);
 let Port=3000;
 server.listen(Port,function(){
-    console.log(`server ishga tushdi ${Port}`);
+    console.log(`server ishga tushdi ${Port}, http://localhost:${Port}`);
 });
