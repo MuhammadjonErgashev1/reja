@@ -1,33 +1,34 @@
-console.log("web serverni qurish");
-const express=require('express');
-const app=express();
-const http=require('http');
-const fs=require("fs");
+const http = require('http');
+const { MongoClient } = require("mongodb"); // MongoClient import qilamiz
+const app = require("./app");
 
+const connectionString = "mongodb+srv://Muhammadjon:muhamadjon1%40@cluster0.xkhhdev.mongodb.net/Reja";
 
-//1 kirish
-app.use(express.static("public"));
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
-//2 Session
-//3 views code
-app.set("views","views");
-app.set("view engine","ejs");
-//4 rauting code
-app.get("/",function(req,res){
-    res.end("hello world  me");
+// MongoClient yaratamiz
+const client = new MongoClient(connectionString, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 
-app.get("/hello", function(req,res){
-   res.send("hali bu boshlanishi");
-});
+// MongoDB ga ulanib, serverni ishga tushiramiz
+client.connect()
+.then(() => {
+    console.log("✅ MongoDB connection succeeded");
+    module.exports=client;
 
-app.get("/gift", function(req,res){
-    res.send("bu yer sovgalar sahifasi bo'lishi mumkun edi");
-});
+    // DB obyekti (ixtiyoriy)
+    const db = client.db("Reja");
 
-const server=http.createServer(app);
-let Port=3000;
-server.listen(Port,function(){
-    console.log(`server ishga tushdi ${Port}`);
+    // HTTP server yaratamiz
+    const server = http.createServer(app);
+    const Port = 3000;
+
+    server.listen(Port, () => {
+        console.log(`Server ishga tushdi ${Port}, http://localhost:${Port}`);
+    });
+})
+.catch(err => {
+    console.error("❌ Error on MongoDB connection:", err);
 });
+module.exports = { client, getDb: () => db };
+

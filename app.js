@@ -1,9 +1,10 @@
 console.log("web serverni qurish");
 const express=require('express');
 const app=express();
-const http=require('http');
+const res=require("express/lib/response")
 const fs=require("fs")
 
+const { getDb } = require('./server');
 let user;
 fs.readFile("database/user.json","utf8", (err,data)=>{
     if(err){
@@ -13,6 +14,7 @@ fs.readFile("database/user.json","utf8", (err,data)=>{
         user=JSON.parse(data);
     };
 });
+//MongoDb connect
 
 
 //1 kirish
@@ -35,9 +37,4 @@ app.post("/create-item", (req,res)=>{
 app.get('/author', (req,res)=>{
     res.render("author", {user: user})
 });
-
-const server=http.createServer(app);
-let Port=3000;
-server.listen(Port,function(){
-    console.log(`server ishga tushdi ${Port}, http://localhost:${Port}`);
-});
+module.exports = app;
