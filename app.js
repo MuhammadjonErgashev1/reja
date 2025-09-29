@@ -1,58 +1,60 @@
+console.log("web server qurishni boshlash");
+
+const { urlencoded } = require('body-parser');
+const express=require('express')
+const app=express();
 
 
-console.log("Starting the server...");
-const express = require('express');
-const res = require('express/lib/response');
-const app = express();
-const fs = require("fs");
+//mongodb chaqirish
 
-// MongoDB call
-const db = require("./server").db();
-
-let user;
-fs.readFile("database/user.json", "utf-8", (err, data) => {
-    if (err) {
-        console.log("ERROR: ", err);
-    } else {
-        user = JSON.parse(data);
-    }
-});
-
-// 1: Entering code
-app.use(express.static('public'));
+const db = require("./server").db()
+const mongodb=require('mongodb')
+//kirish code
+app.use(express.static("public"))
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended: true}))
+//2 session code
+//3 views code
+app.set("views", "views")// bu kerakli papkani qayerdaligini qidiradi
+app.set("view engine", "ejs") //bu esa qidirilgan va ishlatiladigon file qaysi tipdaligini ko'rsatib beradi
+//biz ejs faylini backenda yasab browser qismiga jo'natishni sozlab oldik. va kerakli faylni avtomatik render qilish uchun ishlatiladi
+//routing code
 
-// 2: Session code
-// 3: Views code
-app.set("views", "views");
-app.set("view engine", "ejs");
 
-// 4: Routing code
-app.post("/create-item", function (req, res) {
-    console.log("user entered /create-item route");
-    const new_reja = req.body.reja;
-    db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
+app.post('/create-item', (req,res)=>{
+    console.log(req.body)
+    const new_reja=req.body.reja;
+    db.collection("plans").insertOne({reja: new_reja}, (err,data)=>{
         console.log(data.ops)
         res.json(data.ops[0]);
-    });
+    })
+  
+})
+
+app.post("/delete-item", (req,res)=>{
+    const id=req.body.id;
+    db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id) }, function(err,data){
+        res.json({state: "success"})
+    })
+    
 });
 
-app.get("/author", function (req, res) {
-    res.render("author", { user: user });
-});
-app.get("/", function (req, res) {
-    console.log("user entered / route");
+
+
+app.get('/', (req,res)=>{
     db.collection("plans")
-        .find()
-        .toArray((err, data) => {
-            if (err) {
-                console.log(err);
-            } else {
-                res.render("reja", { items: data });
-            }
-        });
-});
-
+    .find()
+    .toArray((err,data)=>{
+        if(err){
+            console.log(err);
+            console.log("something went wrong")
+        }
+        else{
+            console.log(data)
+            res.render("reja", {items: data})
+        }
+    })
+    
+})
 
 module.exports = app;
