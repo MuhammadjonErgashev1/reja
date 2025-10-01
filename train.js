@@ -1,60 +1,79 @@
-//Midtask C
-const moment = require("moment");
+//Task D
 
-class Shop {
-  constructor(item1, item2, item3) {
-    this.item1 = item1;
-    this.item2 = item2;
-    this.item3 = item3;
-    
-  }
+function checkContent(string1, string2){
+  const matn1=string1.split("").sort().join();
+  const matn2=string2.split("").sort().join();
 
-  qoldiq(num1, num2, num3) {
-    this.num1 = num1;
-    this.num2 = num2;// agar metodda ishlatilayotgan parametr boshqa metodlar ichida ham ishlatilsa bunda this sifatida global qiymatlar qabul qilib olamiz.
-    this.num3 = num3;
-    console.log(`[${moment().format("HH:mm:ss")}] Qoldiq holati:`);
-    console.log(`${this.num1} ta ${this.item1}, ${this.num2} ta ${this.item2}, ${this.num3} ta ${this.item3} mavjud`);
-  }
-
-  sotish(s1, s2, s3) {
-    console.log(`[${moment().format("HH:mm:ss")}] Sotish harakati:`);
-
-    if (this.num1 >= s1) {
-      this.num1 -= s1;
-      console.log(`${s1} ta ${this.item1} sotildi`);
-    } else {
-      console.log(`${this.item1} mahsuloti yetarli emas`);
-    }
-
-    if (this.num2 >= s2) {
-      this.num2 -= s2;
-      console.log(`${s2} ta ${this.item2} sotildi`);
-    } else {
-      console.log(`${this.item2} mahsuloti yetarli emas`);
-    }
-
-    if (this.num3 >= s3) {
-      this.num3 -= s3;
-      console.log(`${s3} ta ${this.item3} sotildi`);
-    } else {
-      console.log(`${this.item3} mahsuloti yetarli emas`);
-    }
-  }
-
-  qabul() {
-    console.log(`[${moment().format("HH:mm:ss")}] Yangi qoldiq holati:`);
-    console.log(`${this.num1} ta ${this.item1} qoldi`);
-    console.log(`${this.num2} ta ${this.item2} qoldi`);
-    console.log(`${this.num3} ta ${this.item3} qoldi`);
+  if(matn1===matn2){
+    return true;
+  } else{
+    return false;
   }
 }
+console.log(checkContent("mitgroup","gmtiprou"));
 
 
-const obj1 = new Shop("non", "lagmon", "cola");
-obj1.qoldiq(4, 5, 2);    
-obj1.sotish(2, 4, 1);     
-obj1.qabul();            
+
+
+
+
+// //Midtask C
+// const moment = require("moment");
+
+// class Shop {
+//   constructor(item1, item2, item3) {
+//     this.item1 = item1;
+//     this.item2 = item2;
+//     this.item3 = item3;
+    
+//   }
+
+//   qoldiq(num1, num2, num3) {
+//     this.num1 = num1;
+//     this.num2 = num2;// agar metodda ishlatilayotgan parametr boshqa metodlar ichida ham ishlatilsa bunda this sifatida global qiymatlar qabul qilib olamiz.
+//     this.num3 = num3;
+//     console.log(`[${moment().format("HH:mm:ss")}] Qoldiq holati:`);
+//     console.log(`${this.num1} ta ${this.item1}, ${this.num2} ta ${this.item2}, ${this.num3} ta ${this.item3} mavjud`);
+//   }
+
+//   sotish(s1, s2, s3) {
+//     console.log(`[${moment().format("HH:mm:ss")}] Sotish harakati:`);
+
+//     if (this.num1 >= s1) {
+//       this.num1 -= s1;
+//       console.log(`${s1} ta ${this.item1} sotildi`);
+//     } else {
+//       console.log(`${this.item1} mahsuloti yetarli emas`);
+//     }
+
+//     if (this.num2 >= s2) {
+//       this.num2 -= s2;
+//       console.log(`${s2} ta ${this.item2} sotildi`);
+//     } else {
+//       console.log(`${this.item2} mahsuloti yetarli emas`);
+//     }
+
+//     if (this.num3 >= s3) {
+//       this.num3 -= s3;
+//       console.log(`${s3} ta ${this.item3} sotildi`);
+//     } else {
+//       console.log(`${this.item3} mahsuloti yetarli emas`);
+//     }
+//   }
+
+//   qabul() {
+//     console.log(`[${moment().format("HH:mm:ss")}] Yangi qoldiq holati:`);
+//     console.log(`${this.num1} ta ${this.item1} qoldi`);
+//     console.log(`${this.num2} ta ${this.item2} qoldi`);
+//     console.log(`${this.num3} ta ${this.item3} qoldi`);
+//   }
+// }
+
+
+// const obj1 = new Shop("non", "lagmon", "cola");
+// obj1.qoldiq(4, 5, 2);    
+// obj1.sotish(2, 4, 1);     
+// obj1.qabul();            
 
 
 // function countDigits(str) {
