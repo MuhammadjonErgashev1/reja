@@ -1,16 +1,26 @@
-//Task D
+//Task E
 
-function checkContent(string1, string2){
-  const matn1=string1.split("").sort().join();
-  const matn2=string2.split("").sort().join();
-
-  if(matn1===matn2){
-    return true;
-  } else{
-    return false;
-  }
+function getReverse (text) {
+  return text.split('').reverse().join('');
+  
 }
-console.log(checkContent("mitgroup","gmtiprou"));
+console.log(getReverse('hello'))
+
+
+
+// //Task D
+
+// function checkContent(string1, string2){
+//   const matn1=string1.split("").sort().join();
+//   const matn2=string2.split("").sort().join();
+
+//   if(matn1===matn2){
+//     return true;
+//   } else{
+//     return false;
+//   }
+// }
+// console.log(checkContent("mitgroup","gmtiprou"));
 
 
 
