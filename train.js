@@ -1,10 +1,32 @@
+//task F
+
+function findDoublers(matn){
+  const text=matn.split("");// hello
+
+  for(let i=0; i<text.length; i++){
+
+    for(let j=i+1; j<text.length; j++){
+
+      if(text[i]==text[j]){
+        return true;
+
+      }
+    }
+  }
+return false;
+}
+
+console.log(findDoublers("heloe"))
+
+
+
 //Task E
 
-function getReverse (text) {
-  return text.split('').reverse().join('');
+// function getReverse (text) {
+//   return text.split('').reverse().join('');
   
-}
-console.log(getReverse('hello'))
+// }
+// console.log(getReverse('hello'))
 
 
 
