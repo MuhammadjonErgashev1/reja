@@ -1,22 +1,54 @@
-//task F
+//task G
+// 1 usul
 
-function findDoublers(matn){
-  const text=matn.split("");// hello
+// function getHighestIndex(arr){                //5 21 12 21 8
+//    let max=arr[0];
+//    let maxIndex=0;
+//   for(let i=0; i<arr.length; i++){
+      
+//       if(max<arr[i]){
+//         max=arr[i];
+//         maxIndex=i;
+        
+//       }
+//    }
+//    return maxIndex;
+// }
 
-  for(let i=0; i<text.length; i++){
+// const numbers=[35,5,12,21,8,4,35];
+// console.log(getHighestIndex(numbers));
 
-    for(let j=i+1; j<text.length; j++){
-
-      if(text[i]==text[j]){
-        return true;
-
-      }
-    }
-  }
-return false;
+// 2 usul
+function getHighestIndex(arr){                //5 21 12 21 8
+   const max = Math.max(...arr);
+   return arr.indexOf(max)
 }
 
-console.log(findDoublers("heloe"))
+const numbers=[35,5,12,21,8,4,35];
+console.log(getHighestIndex(numbers));
+
+
+
+
+//task F
+
+// function findDoublers(matn){
+//   const text=matn.split("");// hello
+
+//   for(let i=0; i<text.length; i++){
+
+//     for(let j=i+1; j<text.length; j++){
+
+//       if(text[i]==text[j]){
+//         return true;
+
+//       }
+//     }
+//   }
+// return false;
+// }
+
+// console.log(findDoublers("heloe"))
 
 
 
